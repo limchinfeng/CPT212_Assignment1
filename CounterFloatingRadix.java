@@ -36,10 +36,10 @@ public class CounterFloatingRadix {
         // and add them to the corresponding ArrayList in Array1.
         counter++;// 1 value assignment i=0
         for (int i = 0; i < arr.length; i++) {
-            int index = (int) ((arr[i] * exponent) % 10);
-            float value = arr[i];
-            Array1[index].add(value);
-            counter+=12;
+            int index = (int) ((arr[i] * exponent) % 10); 
+            float value = arr[i]; 
+            Array1[index].add(value); 
+            counter+=13;
         }
 
         // Multiply the radix by 10 to move to the next digit to the left of the decimal
@@ -54,14 +54,14 @@ public class CounterFloatingRadix {
             counter++;// 1 value assignment i=0
             for (int i = 0; i < 10; i++) {
                 counter++;// 1 value assignment j=0
-                for (int j = 0; j < Array1[i].size(); j++) {
+                for (int j = 0; j < Array1[i].size(); j++) { 
                     float Array1Value = Array1[i].get(j);
                     int index1 = (int) ((Array1Value / exponent) % 10);
                     Array2[index1].add(Array1Value);
-                    counter+=13;
+                    counter+=14;
                 }
                 Array1[i].clear();
-                counter+=6;
+                counter+=5;
             }
             // Multiply the radix by 10 to move to the next digit to the left of the decimal point.
             exponent *= 10;
@@ -75,11 +75,11 @@ public class CounterFloatingRadix {
                 for (int j = 0; j < Array2[i].size(); j++) {
                     float Array2Value = Array2[i].get(j);
                     int index2 = (int) ((Array2Value / exponent) % 10);
-                    Array1[index2].add(Array2Value);
-                    counter+=13;
+                    Array1[index2].add(Array2Value); 
+                    counter+=14;
                 }
                 Array2[i].clear();
-                counter+=6;
+                counter+=5;
             }
             counter+=4;
         }
@@ -97,10 +97,10 @@ public class CounterFloatingRadix {
             while (!Array1[i].isEmpty()) {
                 float sortedArrayValue = Array1[i].remove(0);
                 sortedArray[arrCount] = sortedArrayValue;
-                arrCount++;
-                counter+=8;
+                arrCount++; 
+                counter+=10;
             }
-            counter+=4;
+            counter+=3; // for loop
         }
         counter++;
         return sortedArray;
@@ -131,7 +131,7 @@ public class CounterFloatingRadix {
         counter++;// 1 value assignment i=0
         for (int i = 0; i < 10; i++) {
             arrays[i] = new ArrayList<>();
-            counter+=5;
+            counter+=6;
         }
 
         counter++;
@@ -161,20 +161,6 @@ public class CounterFloatingRadix {
             for(int j=0; j<n[i] ;j++){
                 ar[j] = rand.nextFloat(n[i]);
             }
-
-//             for(int j=1; j<=n[i] ;j++){
-//                 ar[j-1]=j+0.1f;
-// //                System.out.print(ar[j-1]+" , ");
-//             }
-
-//             //Randomize the number in the array to have a more accurate results
-//             Random rand = new Random();
-//             for (int k = ar.length - 1; k > 0; k--) {
-//                 int j = rand.nextInt(k + 1);
-//                 float temp = ar[k];
-//                 ar[k] = ar[j];
-//                 ar[j] = temp;
-//             }
             
             float[] sortedArrCounter= FloatRadixsort(ar);
             System.out.println("n = "+n[i] +" , counter = "+counter);

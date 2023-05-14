@@ -61,7 +61,7 @@ public class CounterIntegerRadix{
                 }
 
                 Array1[i].clear();
-                counter+=6;
+                counter+=5;
             }
 
             // Multiply the radix by 10 to move to the next significant digit
@@ -80,7 +80,7 @@ public class CounterIntegerRadix{
                     counter+=13;
                 }
                 Array2[i].clear();
-                counter+=6;
+                counter+=5;
             }
             counter+=4;
         }
@@ -99,9 +99,9 @@ public class CounterIntegerRadix{
                 int sortedArrayValue = Array1[i].remove(0);
                 sortedArray[arrCount] = sortedArrayValue;
                 arrCount++;
-                counter+=8;
+                counter+=10;
             }
-            counter+=4;
+            counter+=3;
         }
         counter++;
         return sortedArray;
@@ -132,7 +132,7 @@ public class CounterIntegerRadix{
         counter++;// 1 value assignment i=0
         for (int i = 0; i < 10; i++) {
             arrays[i] = new ArrayList<>();
-            counter+=5;
+            counter+=6;
         }
 
         counter++;
@@ -163,20 +163,6 @@ public class CounterIntegerRadix{
             for(int j=0; j<n[i] ;j++) {
                 ar[j] = rand.nextInt(n[i]);
             }
-
-//             for(int j=1; j<=n[i] ;j++){
-//                 ar[j-1]=j;
-// //                System.out.print(ar[j-1]+" , ");
-//             }
-
-//             // Randomize the number in the array to have a more accurate results
-//             Random rand = new Random();
-//             for (int k = ar.length - 1; k > 0; k--) {
-//                 int j = rand.nextInt(k + 1);
-//                 int temp = ar[k];
-//                 ar[k] = ar[j];
-//                 ar[j] = temp;
-//             }
     
             IntegerRadixsort(ar);
             System.out.println("n = "+n[i] +" , counter = "+counter);
