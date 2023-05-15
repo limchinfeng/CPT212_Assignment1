@@ -137,7 +137,7 @@ public class FloatingRadix {
         float[] sortedArray2 = FloatRadixsort(arr2);
         float[] sortedArray3 = FloatRadixsort(arr3);
 
-        //print the results
+        // print the sorted Random Array 2
         System.out.print("\nOriginal Random Array 1: ");
         print(arr2);
         System.out.print("Sorted Random Array 1: ");
@@ -145,7 +145,8 @@ public class FloatingRadix {
 
         System.out.print("\n");
 
-        System.out.print("Original Random Array 1: ");
+        // print the sorted Random Array 2
+        System.out.print("Original Random Array 2: ");
         print(arr3);
         System.out.print("Sorted Random Array 2: ");
         print(sortedArray3);

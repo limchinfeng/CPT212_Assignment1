@@ -149,6 +149,7 @@ public class CounterFloatingRadix {
     // This is the main method where the program starts executing
     public static void main(String[] args) {
 
+        //number of floatings to sort
         int [] n = {1,10,100,1000,10000,20000, 40000, 60000, 80000, 100000};
 
         for(int i=0; i<n.length; i++){
@@ -159,7 +160,7 @@ public class CounterFloatingRadix {
 
             Random rand = new Random();
             for(int j=0; j<n[i] ;j++){
-                ar[j] = rand.nextFloat(n[i]);
+                ar[j] = rand.nextFloat(n[i]);   // randomly assign a floating number to array
             }
             
             float[] sortedArrCounter= FloatRadixsort(ar);

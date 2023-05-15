@@ -150,7 +150,7 @@ public class CounterIntegerRadix{
     // This is the main method where the program starts executing
     public static void main(String[] args) {
 
-
+        // number of integers to sort
         int [] n = {1,10,100,1000,10000,20000, 40000, 60000, 80000, 100000};
 
         for(int i=0; i<n.length; i++){
@@ -161,7 +161,7 @@ public class CounterIntegerRadix{
 
             Random rand = new Random();
             for(int j=0; j<n[i] ;j++) {
-                ar[j] = rand.nextInt(n[i]);
+                ar[j] = rand.nextInt(n[i]); // randomly assign a integer number to array
             }
     
             IntegerRadixsort(ar);

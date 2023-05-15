@@ -134,7 +134,7 @@ public class IntegerRadix {
         int[] sortedArray2 = IntegerRadixsort(arr2);
         int[] sortedArray3 = IntegerRadixsort(arr3);
 
-        //print the results
+        // print the sorted Random Array 1
         System.out.print("Original Random Array 1: ");
         print(arr2);
         System.out.print("Sorted Random Array 1: ");
@@ -142,7 +142,8 @@ public class IntegerRadix {
 
         System.out.print("\n");
 
-        System.out.print("Original Random Array 1: ");
+        // print the sorted Random Array 2
+        System.out.print("Original Random Array 2: ");
         print(arr3);
         System.out.print("Sorted Random Array 2: ");
         print(sortedArray3);
